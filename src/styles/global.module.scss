@@ -1,0 +1,187 @@
+$primary-color: #333;
+
+
+.button{
+   outline: none;
+   border: none;
+   font-family: "Play", sans-serif;
+    display: inline-block;
+    padding: 20px;
+    background-color: #ff007f; /* Pink color */
+    color: white; 
+    text-transform: uppercase;
+    clip-path: polygon(92% 0, 100% 25%, 100% 100%, 8% 100%, 0% 75%, 0 0);
+transition: all .2s ease;
+    &:hover{
+        background-color: #e6006d; /* Darker pink on hover */
+        cursor: pointer;
+        transform: translateY(-15px);
+     }
+     
+}
+
+
+.logo{
+
+    width: 200px;
+    border-radius: 50%;
+    position: fixed;
+    left: calc(50% - 100px);
+    top: calc(50% - 100px);
+    transition: all 1s ease;
+    transition-delay:2s ;
+}
+
+
+
+
+
+
+.start{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.notification{
+    animation: result 1s 1;
+    width: 60%;
+    height: 40%;
+    clip-path: polygon(92% 0, 100% 25%, 100% 100%, 8% 100%, 0% 75%, 0 0);
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    color: cyan;
+    font-size: 44px;
+font-family: 'Play';
+}
+
+.question{
+    animation: nextQues 1s 1 ;
+    width: 80%;
+    height: 500px;
+  
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    &_title{
+        font-size: 34px;
+        font-family: 'Play';
+        color: white;
+        
+    }
+
+    &_answers{
+        display: flex;
+         width: 100%;
+        justify-content: space-evenly;
+        align-items: center;
+
+        & button{
+            cursor: pointer;
+            width: 250px;
+            height: 60px;
+            font-size: 18px;
+            clip-path: polygon(92% 0, 100% 25%, 100% 100%, 8% 100%, 0% 75%, 0 0);
+            border: none;
+            outline: none;
+            color: black;
+            font-family: 'Play';
+            background-color: yellow;
+            transition: all .2s ease;
+
+            &:hover{
+                transform: translateY(-15px);
+                color: white;
+                background-color: cyan;
+            }
+   
+        }
+    }
+}
+
+.test{
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+     background-image: radial-gradient(
+         ellipse at 33% 10%,
+         #461616 0%,
+         transparent 75%
+       );
+   
+    animation: start 1s 1;
+}
+
+
+
+@keyframes nextQues{
+    0%{
+        transform: translateY(300px) translateX(-50px);
+    }
+    50%{
+        transform: translateY(0) translateX(-50px);
+    }
+
+    100%{
+        transform: translateY(0) translateX(0);
+    }
+}
+
+@keyframes start{
+0%{
+   opacity:0;
+}
+100%{
+    opacity:1;
+ }
+
+}
+
+
+@keyframes result{
+    0%{
+        transform: translateY(300px) translateX(-50px);
+        opacity: 0;
+    }
+    20%{transform: translateY(300px) translateX(-50px);
+        opacity: 1;
+    }
+    40%{
+        transform: translateY(300px) translateX(-50px);
+        opacity: 0;  
+    }
+    50%{
+        transform: translateY(0) translateX(-50px);
+        opacity: 1;  
+    }
+    60%{
+        transform: translateY(0) translateX(-50px);
+        opacity: 0;  
+    }
+    70%{
+        transform: translateY(0) translateX(-50px);
+        opacity: 1;  
+    }
+    80%{
+        transform: translateY(0) translateX(-50px);
+        opacity: 0;  
+    }
+
+    100%{
+        transform: translateY(0) translateX(0);
+        opacity: 1;
+    }
+}

@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&family=Tektur:wght@400..900&display=swap');
+
+body{
+    margin: 0;
+}
+
+
+.active{
+  
+   animation: active .5s 1 forwards;
+}
+
+
+@keyframes active{
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100%{
+        transform: scale(3);
+        opacity: 0;
+    }
+}
